@@ -88,7 +88,7 @@ public:
   Void copyFrom( const ContextModel3DBuffer* src )
   {
     assert( m_sizeXYZ == src->m_sizeXYZ );
-    ::memcpy( m_contextModel, src->m_contextModel, sizeof(ContextModel) * m_sizeXYZ );
+    ::memcpy((void*)m_contextModel, src->m_contextModel, sizeof(ContextModel) * m_sizeXYZ );
   }
 };
 
